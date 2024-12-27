@@ -1,0 +1,19 @@
+﻿@model ExampleViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<form asp-action="DemoSubmit" asp-controller="Home">
+<input asp-for="TWExampleDateString" id="ExampleDate" type="text" class="form-control" required alt="範例時間轉換">
+
+<button type="submit">送出</button>
+</form>
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+<script src="~/js/taiwan-datepicker.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        $("#ExampleDate").taiwanDatepicker();
+    });
+</script>

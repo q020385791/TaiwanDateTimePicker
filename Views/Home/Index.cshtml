@@ -1,0 +1,12 @@
+﻿@model ExampleViewModel
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = null;
+}
+<input asp-for="TWExampleDateString" id="ExampleDate" type="text" class="form-control" required alt="範例時間轉換">
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        $("#ExampleDate").taiwanDatepicker();
+    });
+</script>

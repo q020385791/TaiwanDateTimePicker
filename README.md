@@ -62,5 +62,92 @@ int taiwanYear = ExampleDate.Year - 1911;
 return $"{taiwanYear}-{ExampleDate.Month:D2}-{ExampleDate.Day:D2}";
 ```
 
+```csharp
+// 從民國日期字串轉換回 DateTime
+if (!string.IsNullOrWhiteSpace(value))
+{
+    var parts = value.Split('-');
+    if (parts.Length == 3)
+    {
+        int taiwanYear = int.Parse(parts[0]);
+        int year = taiwanYear + 1911;
+        int month = int.Parse(parts[1]);
+        int day = int.Parse(parts[2]);
+        ExampleDate = new DateTime(year, month, day);
+    }
+}
+```
+
+# Demo.cshtml
+此 Razor 視圖包含：
+
+- 一個表單，用於讓使用者選擇並提交日期。
+- jQuery UI 日期選擇器，支持西元與民國格式的轉換。
+- 提交按鈕將觸發 DemoSubmit 方法。
+
+# jQuery UI 日期選擇器修改
+在 Demo.cshtml 中引用了 jQuery UI 並進行自訂：
+1.**引用所需資源**：
+```charp
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+```
+
+2.**初始化與自訂日期選擇器**：
+```javascript
+$(function () {
+    $("#exampleDate").datepicker({
+        dateFormat: "yy-mm-dd",
+        onSelect: function (dateText, inst) {
+            let taiwanYear = parseInt(dateText.split('-')[0]) - 1911;
+            let taiwanDate = taiwanYear + "-" + dateText.split('-')[1] + "-" + dateText.split('-')[2];
+            $("#taiwanDateDisplay").val(taiwanDate);
+        }
+    });
+
+    // 將民國日期初始化為日期選擇器的值
+    let initialDate = $("#exampleDate").val();
+    if (initialDate) {
+        let parts = initialDate.split('-');
+        let westernYear = parseInt(parts[0]) + 1911;
+        $("#exampleDate").datepicker("setDate", westernYear + "-" + parts[1] + "-" + parts[2]);
+    }
+});
+```
+
+3.**自訂 HTML**：
+```html
+<input id="exampleDate" name="ExampleDate" type="text" />
+<input id="taiwanDateDisplay" type="text" readonly />
+```
+
+
+# 使用方法
+1.克隆此專案到本地。     
+2.使用 Visual Studio 打開專案。        
+3.確保 NuGet 套件已成功還原。     
+4.建置並運行專案。      
+5.在瀏覽器中進入 /Home/Demo 頁面，即可查看 Demo 功能。
+
+
+# 提示 
+1.民國日期格式限制：     
+
+- 提交的日期需要符合民國格式，例如：112-05-12。       
+若格式錯誤，可能會導致轉換失敗。 
+
+
+2. jQuery UI 日期選擇器：
+- 請確保頁面已正確引用 jQuery 和 jQuery UI 的相關資源。    
+- 自訂日期選擇器時，注意日期格式與民國年的轉換邏輯。
+
+# 開發環境
+- 開發框架: ASP.NET Core MVC
+- 前端框架: jQuery UI
+- IDE: Visual Studio
+- 語言: C# (後端) 和 Razor + jQuery (前端)
+
+
 # 授權
 此專案僅供學習與展示用途，歡迎自由使用。

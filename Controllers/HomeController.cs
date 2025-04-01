@@ -22,6 +22,7 @@ namespace DateTimePickerROC.Controllers
         {
             ExampleViewModel model=new ExampleViewModel();
             model.ExampleDate = DateTime.Now;
+            model.ExampleDateWithTime = DateTime.Now;
             return View(model);
         }
         [HttpPost]

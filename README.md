@@ -1,69 +1,61 @@
- 
- # Demo ­¶­±»¡©ú¤å¥ó
+ï»¿# ğŸ—“ æ°‘åœ‹/è¥¿å…ƒ æ—¥æœŸ + æ™‚é–“ é¸æ“‡å™¨ Demo
 
-¦¹±M®×®i¥Ü¤F¨Ï¥Î ASP.NET Core MVC ¹ê²{ªºÂ²³æ¤é´Á¿ï¾Ü¾¹¡A¤ä«ù¦è¤¸»P¥Á°ê¤é´ÁªºÂà´«¥\¯à¡C
-
----
-
-## ±M®×Â²¤¶
-
-¥»±M®×¥D­n¥]§t¥H¤U²Õ¥ó¡G
-
-1. **±±¨î¾¹ (Controller)**: `HomeController.cs` - ³B²z­¶­±ªºÅŞ¿è¡C
-2. **µø¹Ï¼Ò«¬ (ViewModel)**: `ExampleViewModel.cs` - «Ê¸Ë¨Ñµø¹Ï¨Ï¥Îªº¸ê®Æ¡A¥]§t¥Á°ê¤é´Á®æ¦¡ªº¤ä´©¡C
-3. **µø¹Ï (View)**: `Demo.cshtml` - ­t³dÅã¥Ü¤é´Á¿ï¾Ü¾¹»P´£¥æ¥\¯àªº Razor µø¹Ï¡C
+æ­¤å°ˆæ¡ˆå±•ç¤ºå¦‚ä½•åœ¨ **ASP.NET Core MVC** ä¸­æ•´åˆæ°‘åœ‹ï¼ˆROCï¼‰èˆ‡è¥¿å…ƒæ—¥æœŸæ ¼å¼é¸æ“‡å™¨ï¼Œä¸¦æ–°å¢ **æ™‚é–“é¸æ“‡åŠŸèƒ½**ã€‚  
+å‰ç«¯ä½¿ç”¨ **jQuery UI** + **Timepicker Addon**ï¼Œæ”¯æ´å‹•æ…‹æ—¥æœŸèˆ‡æ™‚é–“è½‰æ›ã€‚
 
 ---
 
-## ¥\¯à»¡©ú
+## ğŸ“Œ å°ˆæ¡ˆæ¶æ§‹
 
-- **¤é´ÁÅã¥Ü»PÂà´«**:
-  - ¤ä´©Åã¥Ü¦è¤¸¤é´Á»P¥Á°ê¤é´Á®æ¦¡¡C
-  - ¥Á°ê¤é´Á®æ¦¡·|¦Û°ÊÂà´«¬° `DateTime` ¸ê®ÆÃş«¬¡C
+- **Controller**ï¼š`HomeController.cs`  
+- **ViewModel**ï¼š`ExampleViewModel.cs`  
+- **View**ï¼š`Demo.cshtml`  
+- **JavaScript æ“´å……æ’ä»¶**ï¼š`taiwan-datepicker.js`  
+- **æ™‚é–“é¸æ“‡æ’ä»¶**ï¼š`jquery-ui-timepicker-addon`
 
-- **ªí³æ³B²z**:
-  - ´£¨Ñªí³æ¨Ñ¨Ï¥ÎªÌ¿ï¾Ü»P´£¥æ¤é´Á¡C
-  - Åã¥Ü´£¥æ«áªº¤é´Á¸ê®Æ¡A¨Ã¦^¶Ç§ó·s«áªº­¶­±¡C
-
-- **jQuery UI ¤é´Á¿ï¾Ü¾¹**:
-  - ¨Ï¥Î jQuery UI ªº `datepicker` ¤¸¥ó¡C
-  - ­×§ï `datepicker` ªº¦æ¬°¥HÅã¥Ü»P³B²z¥Á°ê®æ¦¡ªº¤é´Á¡C
 ---
 
-## ±M®×µ²ºc
+## ğŸ”§ åŠŸèƒ½ç°¡ä»‹
 
-### `HomeController.cs`
+- âœ… æ°‘åœ‹èˆ‡è¥¿å…ƒæ ¼å¼è½‰æ›ï¼ˆè‡ªå‹•è½‰æ›ç‚º `DateTime`ï¼‰
+- âœ… æ”¯æ´ã€Œæ—¥æœŸ + æ™‚é–“ã€æ¬„ä½
+- âœ… è¡¨å–®æäº¤å¾Œè‡ªå‹•è§£ææ™‚é–“æ ¼å¼
+- âœ… jQuery UI å®¢è£½åŒ–æŒ‰éˆ•ï¼šã€Œä»Šå¤©ã€ã€ã€Œæ¸…é™¤ã€ã€ã€Œç¢ºå®šã€
+- âœ… æ°‘åœ‹å¹´ä»½è‡ªå‹•é¡¯ç¤ºï¼ˆ113å¹´ç­‰ï¼‰
 
-`HomeController` ¥]§t¥H¤U¾Ş§@¡G
+---
 
-- `Index()`: ªğ¦^­º­¶ (¥»½d¨Ò¤¤¥¼§@¦Û­q¤Æ³B²z)¡C
-- `Demo()`: 
-  - ³B²z GET ½Ğ¨D¡AÅã¥Ü¤é´Á¿ï¾Ü¾¹¡A¨Ã±a¤J¥Ø«eªº¹w³]¤é´Á¡C
-  - ªğ¦^µø¹Ï®É·|¨Ï¥Î `ExampleViewModel` ´£¨Ñ¸ê®Æ¡C
-- `DemoSubmit()`:
-  - ³B²z POST ½Ğ¨D¡A±µ¦¬¨Ï¥ÎªÌ´£¥æªº¤é´Á¡C
-  - ¥i¦b¸Ó¤èªk¤¤¶i¦æ¤¤Â_ÂIÆ[¹î´£¥æªº­È¡C
-  - ªğ¦^§ó·s«áªºµø¹Ï¡C
+## ğŸ§ª ä½¿ç”¨æ–¹å¼
 
-### `ExampleViewModel.cs`
+1. Clone å°ˆæ¡ˆ
+2. ä½¿ç”¨ Visual Studio é–‹å•Ÿ
+3. é‚„åŸ NuGet å¥—ä»¶
+4. åŸ·è¡Œå¾Œå‰å¾€ `/Home/Demo` é é¢
 
-¦¹µø¹Ï¼Ò«¬¥]§t¥H¤U¤º®e¡G
+---
 
-- `ExampleDate`: ¥Î©óÀx¦s¤é´Áªº `DateTime` Äİ©Ê¡C
-- `TWExampleDateString`: 
-  - ¤@­Ó­pºâÄİ©Ê¡A¥Î©ó±N¤é´ÁÂà´«¬°¥Á°ê®æ¦¡¡C
-  - ¦P®É¤]¤ä´©±N¥Á°ê¤é´Á®æ¦¡ªº¦r¦êÂà´«¦^ `DateTime`¡C
+## ğŸ’» Demo.cshtml è¡¨å–®ç¯„ä¾‹
 
-#### ¥Á°ê¤é´ÁÂà´«ÅŞ¿è¥Ü¨Ò¡G
+```html
+<form asp-action="DemoSubmit" asp-controller="Home">
+  <input asp-for="TWExampleDateString" id="ExampleDate" type="text" class="form-control" />
+  <input asp-for="TWExampleDateWithTimeString" id="ExampleDateWithTime" type="text" class="form-control" />
+  <button type="submit">é€å‡º</button>
+</form>
+```
+
+---
+
+## ğŸ“œ ViewModel æ—¥æœŸè½‰æ›é‚è¼¯
 
 ```csharp
-// Âà´«¬°¥Á°ê¤é´Á®æ¦¡
+// é¡¯ç¤ºæ°‘åœ‹æ ¼å¼
 int taiwanYear = ExampleDate.Year - 1911;
 return $"{taiwanYear}-{ExampleDate.Month:D2}-{ExampleDate.Day:D2}";
 ```
 
 ```csharp
-// ±q¥Á°ê¤é´Á¦r¦êÂà´«¦^ DateTime
+// è½‰æ›æ°‘åœ‹å› DateTime
 if (!string.IsNullOrWhiteSpace(value))
 {
     var parts = value.Split('-');
@@ -78,76 +70,75 @@ if (!string.IsNullOrWhiteSpace(value))
 }
 ```
 
-# Demo.cshtml
-¦¹ Razor µø¹Ï¥]§t¡G
+---
 
-- ¤@­Óªí³æ¡A¥Î©óÅı¨Ï¥ÎªÌ¿ï¾Ü¨Ã´£¥æ¤é´Á¡C
-- jQuery UI ¤é´Á¿ï¾Ü¾¹¡A¤ä«ù¦è¤¸»P¥Á°ê®æ¦¡ªºÂà´«¡C
-- ´£¥æ«ö¶s±NÄ²µo DemoSubmit ¤èªk¡C
+## ğŸ”Œ å‰ç«¯è³‡æºå¼•å…¥
 
-# jQuery UI ¤é´Á¿ï¾Ü¾¹­×§ï
-¦b Demo.cshtml ¤¤¤Ş¥Î¤F jQuery UI ¨Ã¶i¦æ¦Û­q¡G
-1.**¤Ş¥Î©Ò»İ¸ê·½**¡G
-```charp
-<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+```html
+<link href="~/css/jquery-ui.css" rel="stylesheet" />
+<script src="~/js/jquery.min.js"></script>
+<script src="~/js/jquery-ui.min.js"></script>
+<script src="~/js/jquery-ui-timepicker-addon.min.js"></script>
+<script src="~/js/taiwan-datepicker.js"></script>
 ```
 
-2.**ªì©l¤Æ»P¦Û­q¤é´Á¿ï¾Ü¾¹**¡G
 ```javascript
-$(function () {
-    $("#exampleDate").datepicker({
-        dateFormat: "yy-mm-dd",
-        onSelect: function (dateText, inst) {
-            let taiwanYear = parseInt(dateText.split('-')[0]) - 1911;
-            let taiwanDate = taiwanYear + "-" + dateText.split('-')[1] + "-" + dateText.split('-')[2];
-            $("#taiwanDateDisplay").val(taiwanDate);
-        }
-    });
-
-    // ±N¥Á°ê¤é´Áªì©l¤Æ¬°¤é´Á¿ï¾Ü¾¹ªº­È
-    let initialDate = $("#exampleDate").val();
-    if (initialDate) {
-        let parts = initialDate.split('-');
-        let westernYear = parseInt(parts[0]) + 1911;
-        $("#exampleDate").datepicker("setDate", westernYear + "-" + parts[1] + "-" + parts[2]);
-    }
+document.addEventListener("DOMContentLoaded", function () {
+  $("#ExampleDate").taiwanDatepicker();
+  $("#ExampleDateWithTime").taiwanDatepickerWithTime();
 });
 ```
 
-3.**¦Û­q HTML**¡G
+---
+
+## âš ï¸ æ³¨æ„äº‹é …èˆ‡å¯¦ä½œå»ºè­°
+
+### âœ… å–®æ¬„ç”¨æ³•
+
 ```html
-<input id="exampleDate" name="ExampleDate" type="text" />
-<input id="taiwanDateDisplay" type="text" readonly />
+<input id="ExampleDate" type="text" />
 ```
 
+```javascript
+$("#ExampleDate").taiwanDatepicker();
+```
 
-# ¨Ï¥Î¤èªk
-1.§J¶©¦¹±M®×¨ì¥»¦a¡C     
-2.¨Ï¥Î Visual Studio ¥´¶}±M®×¡C        
-3.½T«O NuGet ®M¥ó¤w¦¨¥\ÁÙ­ì¡C     
-4.«Ø¸m¨Ã¹B¦æ±M®×¡C      
-5.¦bÂsÄı¾¹¤¤¶i¤J /Home/Demo ­¶­±¡A§Y¥i¬d¬İ Demo ¥\¯à¡C
+### âœ… å¤šæ¬„æˆ–å‹•æ…‹æ¬„ä½
 
+```html
+<input class="MeetDateTime" type="text" />
+```
 
-# ´£¥Ü 
-1.¥Á°ê¤é´Á®æ¦¡­­¨î¡G     
+```javascript
+$(".MeetDateTime").taiwanDatepicker();
+```
 
-- ´£¥æªº¤é´Á»İ­n²Å¦X¥Á°ê®æ¦¡¡A¨Ò¦p¡G112-05-12¡C       
-­Y®æ¦¡¿ù»~¡A¥i¯à·|¾É­PÂà´«¥¢±Ñ¡C 
+### âœ… Model é è¨­å€¼ï¼ˆå¦å‰‡è½‰æ›æœƒå¤±æ•—ï¼‰
 
+```csharp
+public DateTime ExampleDate { get; set; }
+```
 
-2. jQuery UI ¤é´Á¿ï¾Ü¾¹¡G
-- ½Ğ½T«O­¶­±¤w¥¿½T¤Ş¥Î jQuery ©M jQuery UI ªº¬ÛÃö¸ê·½¡C    
-- ¦Û­q¤é´Á¿ï¾Ü¾¹®É¡Aª`·N¤é´Á®æ¦¡»P¥Á°ê¦~ªºÂà´«ÅŞ¿è¡C
+### âœ… æ°‘åœ‹æ ¼å¼ä¾‹å¤–è™•ç†å»ºè­°
 
-# ¶}µoÀô¹Ò
-- ¶}µo®Ø¬[: ASP.NET Core MVC
-- «eºİ®Ø¬[: jQuery UI
-- IDE: Visual Studio
-- »y¨¥: C# («áºİ) ©M Razor + jQuery («eºİ)
+```csharp
+catch (Exception ex)
+{
+    LogHelper.LogExceptionMessage(ex);
+}
+```
 
+---
 
-# ±ÂÅv
-¦¹±M®×¶È¨Ñ¾Ç²ß»P®i¥Ü¥Î³~¡AÅwªï¦Û¥Ñ¨Ï¥Î¡C
+## ğŸ› ï¸ é–‹ç™¼ç’°å¢ƒ
+
+- **å¾Œç«¯æ¡†æ¶**ï¼šASP.NET Core MVC  
+- **å‰ç«¯å¥—ä»¶**ï¼šjQuery, jQuery UI, jQuery UI Timepicker Addon  
+- **IDE**ï¼šVisual Studio  
+- **èªè¨€**ï¼šC#, Razor, JavaScript (jQuery)
+
+---
+
+## ğŸ“„ æˆæ¬Š License
+
+æ­¤å°ˆæ¡ˆåƒ…ä¾›å­¸ç¿’èˆ‡å±•ç¤ºç”¨é€”ï¼Œæ­¡è¿è‡ªç”±ä½¿ç”¨èˆ‡ä¿®æ”¹ã€‚

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: GenSenRounded-B;
+    src: url(../font/GenSenRounded-B.eot);
+    src: url(../font/GenSenRounded-B.ttf) format('truetype'),
+        url(../font/GenSenRounded-B.woff) format('woff'),
+        url(../font/GenSenRounded-B.eot) format('embedded-opentype');
+}
+
+@font-face {
+    font-family: GenSenRounded-M;
+    src: url(../font/GenSenRounded-M.eot);
+    src: url(../font/GenSenRounded-M.ttf) format('truetype'),
+        url(../font/GenSenRounded-M.woff) format('woff'),
+        url(../font/GenSenRounded-M.eot) format('embedded-opentype');
+}
+
+@font-face {
+    font-family: GenSenRounded-R;
+    src: url(../font/GenSenRounded-R.eot);
+    src: url(../font/GenSenRounded-R.ttf) format('truetype'),
+        url(../font/GenSenRounded-R.woff) format('woff'),
+        url(../font/GenSenRounded-R.eot) format('embedded-opentype');
+}

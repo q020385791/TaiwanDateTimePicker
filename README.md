@@ -3,7 +3,7 @@
 此專案展示如何在 **ASP.NET Core MVC** 中整合民國（ROC）與西元日期格式選擇器，並新增 **時間選擇功能**。  
 前端使用 **jQuery UI** + **Timepicker Addon**，支援動態日期與時間轉換。
 
-![Demo](https://github.com/q020385791/TaiwanDateTimePicker/tt.gif)
+![Demo](https://raw.githubusercontent.com/q020385791/TaiwanDateTimePicker/refs/heads/main/wwwroot/tt.gif)
 ---
 
 ## 📌 專案架構
